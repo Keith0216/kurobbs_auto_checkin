@@ -147,6 +147,7 @@ def configure_logger(debug: bool = False):
 def main():
     """Main function to handle command-line arguments and start the sign-in process."""
     token = os.getenv("TOKEN")
+    logger.error(f"token: {token}")
     debug = os.getenv("DEBUG", False)
     configure_logger(debug=debug)
 
